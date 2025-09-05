@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruf Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #d0e6f7;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 { margin: 0; }
+
+        nav label {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        nav label:hover { color: #1abc9c; }
+
+        .container {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .home-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .home-section img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 60%;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background: #1abc9c; }
+
+        .social-links {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .social-links a {
+            margin: 0 8px;
+            font-size: 22px;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .social-links a:hover { color: #1abc9c; }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        /* Section toggle using radio buttons */
+        input[type="radio"] { display: none; }
+        section { display: none; }
+        #home_radio:checked ~ #home,
+        #skills_radio:checked ~ #skills,
+        #contact_radio:checked ~ #contact {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Maruf</h1>
+    <nav>
+        <label for="home_radio">Home</label>
+        <label for="skills_radio">Skills</label>
+        <label for="contact_radio">Contact</label>
+    </nav>
+</header>
+
+<!-- Radio buttonsssssss-->
+<input type="radio" name="section" id="home_radio" checked>
+<input type="radio" name="section" id="skills_radio">
+<input type="radio" name="section" id="contact_radio">
+
+<!-- Homeeeeeeeeeeeeeee-->
+<section id="home" class="container">
+    <div class="home-section">
+        <div>
+            <h1>Hello!<br> My name is Monjur Ahamed Maruf</h1>
+            <p>Works at Software Engineer Intern at Computer Club, BAIUST</p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9KFIC_PGlTxxRNv6SbkHDBiiyL_LXbwZPyQ&s" alt="profile">
+        </div>
+    </div>
+</section>
+
+<!-- Skillssssssss -->
+<section id="skills" class="container">
+    <h2>Here are my Top Skills</h2>
+    <table>
+        <tr><td>HTML</td></tr>
+        <tr><td>CSS</td></tr>
+        <tr><td>Eat</td></tr>
+        <tr><td>Sleep</td></tr>
+        <tr><td>Code</td></tr>
+        <tr><td>Repeat</td></tr>
+    </table>
+</section>
+
+<!-- Contacttttttt -->
+<section id="contact" class="container">
+    <h2>Let's have a chat</h2>
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright © 2025</p>
+    <p>Created by Maruf 49</p>
+</footer>
+
+</body>
+</html>
